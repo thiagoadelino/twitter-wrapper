@@ -1,5 +1,5 @@
-# twitter-wrapper
-TwitterWrapper it's an application that delivers e-mails with Tweets (from Twitter.com) based on a request received by mail.
+# Twitter-Wrapper
+TwitterWrapper is an application that delivers e-mails with Tweets (from Twitter.com) based on a request received by mail.
 
 The application uses Twitter4j and JavaMail to retrieve Tweets and send them by mail.
 
