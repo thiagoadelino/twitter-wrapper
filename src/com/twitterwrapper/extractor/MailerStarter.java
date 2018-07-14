@@ -18,18 +18,21 @@ public class MailerStarter {
 
 	public static void main(String args[]) {
 
+
+
+
 		ConfigurationBuilder cb = new ConfigurationBuilder();
-		cb.setDebugEnabled(true).setOAuthConsumerKey("#########################")
-				.setOAuthConsumerSecret("##################################################")
-				.setOAuthAccessToken("##################################################")
-				.setOAuthAccessTokenSecret("#############################################");
+		cb.setDebugEnabled(true).setOAuthConsumerKey(args[2])
+				.setOAuthConsumerSecret(args[3])
+				.setOAuthAccessToken(args[4])
+				.setOAuthAccessTokenSecret(args[5]);
 
 		TwitterFactory tf = new TwitterFactory(cb.build());
 		Twitter twitter = tf.getInstance();
 
 		try {
-			final String user = "user@mail.com";
-			final String pass = "password";
+			final String user = args[0];
+			final String pass = args[1];
 
 			while (true) {
 
