@@ -7,4 +7,4 @@ To build the application:
 - Maven
 - Java 1.7
 
-The application is configured to use a Gmail account, you can replace the generic e-mail in the code with your own e-mail address and password. You need also to generate your access tokens for your Twitter account and replace them in the code as well. (You can find it at http://apps.twitter.com)
+The application is configured to use a Gmail account, you can use it with command line arguments (username, password, oAuthConsumerKey, oAuthConsumerSecret, oAuthAccesToken and oAuthAcessTokenSecret). You need also to generate your access tokens for your Twitter account and replace them in the code as well. (You can find it at http://apps.twitter.com)
