@@ -22,17 +22,17 @@ public class MailerStarter {
 
 
 		ConfigurationBuilder cb = new ConfigurationBuilder();
-		cb.setDebugEnabled(true).setOAuthConsumerKey(args[2])
-				.setOAuthConsumerSecret(args[3])
-				.setOAuthAccessToken(args[4])
-				.setOAuthAccessTokenSecret(args[5]);
+		cb.setDebugEnabled(true).setOAuthConsumerKey(System.getenv("OAUTH_CONS_KEY"))
+				.setOAuthConsumerSecret(System.getenv("OAUTH_CONS_SECRET"))
+				.setOAuthAccessToken(System.getenv("OAUTH_ACC_TOKEN"))
+				.setOAuthAccessTokenSecret(System.getenv("OAUTH_ACC_TOKEN_SECRET"));
 
 		TwitterFactory tf = new TwitterFactory(cb.build());
 		Twitter twitter = tf.getInstance();
 
 		try {
-			final String user = args[0];
-			final String pass = args[1];
+			final String user = System.getenv("USER");
+			final String pass = System.getenv("PASS");
 
 			while (true) {
 
