@@ -45,12 +45,14 @@ public class TwitterManager {
 
 	    			String url = videoVariants[0].getUrl();
 
-	    			if(url.endsWith(".mp4")) {
+	    			if(url.contains(".mp4?")) {
 
 	    				if(t.getVidsFiles()==null)
 	    					t.setVidsFiles(new ArrayList<AttachmentTuite>());
 
-	    				t.getVidsFiles().add(new AttachmentTuite(FileManager.downloadFile(url), url));
+	    				String[] u = url.split(".mp4");
+
+	    				t.getVidsFiles().add(new AttachmentTuite(FileManager.downloadFile(u[0]+".mp4"), u[0]+".mp4"));
 	    			}
 	    		}else
 
